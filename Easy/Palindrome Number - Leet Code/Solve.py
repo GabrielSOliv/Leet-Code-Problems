@@ -14,5 +14,5 @@ def isPalindrome(x: int) -> bool:
       
 
 print("the result for the example1 is: " + str(isPalindrome(example1)) + " because is a palindrome")
-print("the result for the example1 is: " + str(isPalindrome(example2)) + " because isn't a palindrome")
-print("the result for the example1 is: " + str(isPalindrome(example3)) + " because isn't a palindrome")
+print("the result for the example2 is: " + str(isPalindrome(example2)) + " because isn't a palindrome")
+print("the result for the example3 is: " + str(isPalindrome(example3)) + " because isn't a palindrome")
