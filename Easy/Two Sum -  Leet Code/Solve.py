@@ -9,10 +9,11 @@ target3 = 6
 
 
 def twoSum(target:int, nums:list) ->list:
-    for i in range(0, len(nums)-1):
-        for j in range(i+1, len(nums)):
-            if nums[i] + nums[j] == target:
-                return [i, j]
+    hashMap = {}
+    for idx, i in enumerate(nums):
+        if hashMap.get(i) is not None:
+            return [hashMap.get(i), idx]
+        hashMap[target - i] = idx 
             
 print (str(twoSum(target1, example1)) + " are the two numbers necessary to reach the target value: " + str(target1) + ".")
 print (str(twoSum(target2, example2)) + " are the two numbers necessary to reach the target value: " + str(target2) + ".")
