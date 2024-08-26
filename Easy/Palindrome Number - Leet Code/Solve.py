@@ -3,14 +3,16 @@ example2 = -121
 example3 = 10 
 
 def isPalindrome(x: int) -> bool:
-    str_num = str(x)
-    str_reorganized = ""
-    for i in range(len(str_num) - 1,-1, -1):
-        str_reorganized += str_num[i]
-    if str_num == str_reorganized:
-        return True
-    else:
-        return False
+    numStr = str(x)
+    leftP, rightP = 0, len(numStr) - 1
+    
+    while leftP < rightP:
+        if numStr[leftP] != numStr[rightP]:
+            return False
+        
+        leftP, rightP = leftP + 1, rightP - 1
+
+    return True
       
 
 print("the result for the example1 is: " + str(isPalindrome(example1)) + " because is a palindrome")
