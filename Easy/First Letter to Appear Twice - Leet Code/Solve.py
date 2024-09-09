@@ -1,18 +1,7 @@
-example1 = "abccbaacz"
-example2 = "abcdd"
-
 def repeatedCharacter(s: str) -> str:
-    letterFrequency = {}
-    strTwice = []
-    for i in range(len(s)):
-        if s[i] in letterFrequency:
-            letterFrequency[s[i]] += 1
-            if letterFrequency[s[i]] == 2:
-                strTwice.append(s[i])
-        else:
-            letterFrequency[s[i]] = 1
+    hm = {}
 
-    return strTwice[0]           
-            
-print(repeatedCharacter(example1))            
-            
+    for i in  range(len(s)):
+        hm[s[i]] = 1 + hm.get(s[i], 0)
+        if hm[s[i]] == 2:
+            return s[i]    
